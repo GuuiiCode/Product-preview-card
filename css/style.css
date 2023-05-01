@@ -23,16 +23,17 @@ body {
 main {
     background-color: var(--white);
     border-radius: 10px;
+    max-width: 375px;
 }
 
-.img-product {
+.img-product-mobile {
     width: 100%;
+    max-width: 375px;
     border-radius: 10px 10px 0 0;
 }
 
-.img-product,
-main {
-    max-width: 375px;
+.img-product-desktop {
+    display: none;
 }
 
 .content {
@@ -89,4 +90,39 @@ main {
     border-radius: 7px;
     background-color: var(--dark-cyan);
     color: var(--white);
+}
+
+.add-cart:hover {
+    cursor: pointer;
+    background-color: hsl(158, 31%, 24%);
+}
+
+@media (min-width: 1024px) {
+    body {
+        width: 100vw;
+        height: 100vh;
+        align-items: center;
+    }
+
+    main {
+        display: flex;
+        max-width: 600px;
+        background-color: var(--white);
+    }
+
+    .img-product-mobile {
+        display: none;
+    }
+
+    .img-product-desktop {
+        display: block;
+        height: 450px;
+        border-radius: 10px 0 0 10px;
+    }
+
+    .content {
+        justify-content: center;
+        gap: 25px;
+        padding: 0 2rem;
+    }
 }
