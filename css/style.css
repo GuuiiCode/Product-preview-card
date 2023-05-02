@@ -47,6 +47,10 @@ picture img {
     color: var(--very-dark-blue);
 }
 
+.text {
+    line-height: 1.6;
+}
+
 .text,
 .sub-title,
 .old-price {
